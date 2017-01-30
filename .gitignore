@@ -2,3 +2,4 @@
 /.molecule
 /tests/__pycache__
 /tests/*.pyc
+/.cache
