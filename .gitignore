@@ -1,0 +1,4 @@
+*.swp
+/.molecule
+/tests/__pycache__
+/tests/*.pyc

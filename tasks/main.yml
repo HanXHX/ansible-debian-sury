@@ -1,0 +1,18 @@
+---
+
+- name: APT | Update cache
+  apt: update_cache=yes cache_valid_time=3600
+  changed_when: false
+
+- name: APT | Install sury dependencies
+  apt: name={{ item }} state=present
+  with_items:
+    - apt-transport-https
+    - ca-certificates
+    - lsb-release
+
+- name: APT_KEY | Install GPG key
+  apt_key: url='{{ sury_apt_url }}/apt.gpg' state=present
+
+- name: APT_REPOSITORY | Add APT repository
+  apt_repository: repo='deb {{ sury_apt_url }} {{ ansible_distribution_release }} main'

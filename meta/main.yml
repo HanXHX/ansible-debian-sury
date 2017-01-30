@@ -1,0 +1,23 @@
+galaxy_info:
+  author: Emilien Mantel
+  description: Install Sury repository for Debian
+  company: your company (optional)
+  license: GPLv2
+  min_ansible_version: 2.0
+
+  platforms:
+  - name: Debian
+    versions:
+    - jessie
+    - stretch
+  galaxy_tags:
+    - apt
+    - debian
+    - dotdeb
+    - packaging
+    - php
+    - sury
+    - system
+    - web
+
+dependencies: []

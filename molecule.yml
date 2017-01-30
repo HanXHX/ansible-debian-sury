@@ -1,0 +1,12 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+docker:
+  containers:
+    - name: ansible-debian-sury
+      image: debian
+      image_version: jessie
+verifier:
+  name: testinfra
