@@ -25,7 +25,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: HanXHX.sury }
+         - { role: HanXHX.debian-sury }
 
 License
 -------
