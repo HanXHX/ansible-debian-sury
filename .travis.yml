@@ -1,17 +1,37 @@
----
+env:
+  - PLATFORM='docker-debian-stretch'          ANSIBLE_VERSION='ansible>=2.9,<2.10,!=2.9.12'
+  - PLATFORM='docker-debian-buster'           ANSIBLE_VERSION='ansible>=2.9,<2.10,!=2.9.12'
+
+matrix:
+  fast_finish: true
 
 sudo: required
+
+dist: trusty
+
 language: python
+python:
+  - 2.7
+  - 3.6
+
 services:
   - docker
+
 before_install:
-  - sudo apt-get -qq update
-  - sudo apt-get install -o Dpkg::Options::="--force-confold" --force-yes -y docker-engine
+  - wget https://releases.hashicorp.com/vagrant/2.0.1/vagrant_2.0.1_x86_64.deb
+  - sudo dpkg -i vagrant_2.0.1_x86_64.deb
+
 install:
-  - pip install docker
-  - pip install molecule
+  - pip install "$ANSIBLE_VERSION"
+
 script:
-  - molecule test
+  - VAGRANT_DEFAULT_PROVIDER=docker vagrant up $PLATFORM
+  - >
+    VAGRANT_DEFAULT_PROVIDER=docker vagrant provision $PLATFORM
+    | grep -q 'changed=0.*failed=0'
+    && (echo 'Idempotence test: pass' && exit 0)
+    || (echo 'Idempotence test: fail' && exit 1)
+  - VAGRANT_DEFAULT_PROVIDER=docker vagrant status
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
