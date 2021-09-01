@@ -1,7 +1,7 @@
 Ansible Debian Sury role
 ========================
 
-[![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-HanXHX.debian--sury-blue.svg)](https://galaxy.ansible.com/HanXHX/debian-sury) [![Build Status](https://travis-ci.org/HanXHX/ansible-debian-sury.svg?branch=master)](https://travis-ci.org/HanXHX/ansible-debian-sury)
+[![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-HanXHX.debian--sury-blue.svg)](https://galaxy.ansible.com/HanXHX/debian-sury) [![Build Status](https://app.travis-ci.com/HanXHX/ansible-debian-sury.svg?branch=master)](https://app.travis-ci.com/HanXHX/ansible-debian-sury)
 
 Install Sury repository for Debian
 
