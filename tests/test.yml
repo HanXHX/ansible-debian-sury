@@ -7,11 +7,11 @@
 
   post_tasks:
     - name: COMMAND | Check if sury packages are available
-      command: apt-cache policy php8.0-common
+      ansible.builtin.command: apt-cache policy php8.0-common
       changed_when: false
       register: rez
 
     - name: FAIL | If Sury's package not found
-      fail:
+      ansible.builtin.fail:
         msg: 'Sury fail'
       when: rez.stdout | length == 0

@@ -1,13 +1,13 @@
 ---
 
 - name: APT | Update cache
-  apt:
+  ansible.builtin.apt:
     update_cache: true
     cache_valid_time: 3600
   changed_when: false
 
 - name: APT | Install sury dependencies
-  apt:
+  ansible.builtin.apt:
     name: "{{ pkgs }}"
   vars:
     pkgs:
@@ -17,9 +17,9 @@
       - lsb-release
 
 - name: APT_KEY | Install GPG key
-  apt_key:
+  ansible.builtin.apt_key:
     url: '{{ sury_apt_url }}/apt.gpg'
 
 - name: APT_REPOSITORY | Add APT repository
-  apt_repository:
+  ansible.builtin.apt_repository:
     repo: 'deb {{ sury_apt_url }} {{ ansible_distribution_release }} main'
