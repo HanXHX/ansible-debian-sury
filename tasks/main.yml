@@ -13,6 +13,7 @@
     pkgs:
       - apt-transport-https
       - ca-certificates
+      - gpg
       - lsb-release
 
 - name: APT_KEY | Install GPG key
