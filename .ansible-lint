@@ -1,0 +1,7 @@
+---
+
+enable_list:
+  - fqcn-builtins
+
+skip_list:
+  - role-name

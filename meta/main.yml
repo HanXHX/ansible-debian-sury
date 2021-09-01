@@ -1,15 +1,18 @@
+---
+
 galaxy_info:
   author: Emilien Mantel
   description: Install Sury repository for Debian
   company: TripleStack
   license: GPLv2
-  min_ansible_version: 2.9
+  min_ansible_version: 2.11
 
   platforms:
-  - name: Debian
-    versions:
-    - stretch
-    - buster
+    - name: Debian
+      versions:
+        - stretch
+        - buster
+        - bullseye
   galaxy_tags:
     - apt
     - debian
