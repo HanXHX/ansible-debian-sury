@@ -1,9 +1,9 @@
 ---
 
-- hosts: all 
-  gather_facts: yes
+- hosts: all
+  gather_facts: true
   roles:
-     - ../../ 
+    - ../../
 
   post_tasks:
     - name: COMMAND | Check if sury packages are available
