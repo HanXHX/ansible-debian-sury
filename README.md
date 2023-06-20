@@ -11,7 +11,6 @@ Managed OS / Versions
 
 |          OS          |       Status        |
 |:--------------------:|:-------------------:|
-|  Debian Stretch (9)  | :heavy_check_mark:  |
 |  Debian Buster (10)  | :heavy_check_mark:  |
 | Debian Bullseye (11) | :heavy_check_mark:  |
 | Debian Bookworm (12) | :heavy_check_mark:  |

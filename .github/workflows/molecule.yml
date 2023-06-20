@@ -14,7 +14,6 @@ jobs:
       fail-fast: false
       matrix:
         scenario:
-          - debian-9
           - debian-10
           - debian-11
           - debian-12
