@@ -1,12 +1,9 @@
 ---
 
-- name: Test role  # noqa: role-name[path]
+- name: Verify
   hosts: all
-  gather_facts: true
-  roles:
-    - ../../
-  post_tasks:
-    - name: COMMAND | Check if sury packages are available
+  tasks:
+    - name: COMMAND | Check if sury packages are available (PHP 8.0 does not exist on Debian repositories)
       ansible.builtin.command: apt-cache policy php8.0-common
       changed_when: false
       register: rez

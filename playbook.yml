@@ -1,7 +1,0 @@
----
-- hosts: all
-  roles:
-    - role: ansible-debian-sury
-  post_tasks:
-    - name: TEST -- Install PHP 7.1
-      apt: name=php7.1-cli state=present
