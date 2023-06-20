@@ -1,19 +1,20 @@
 Ansible Debian Sury role
 ========================
 
-[![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-HanXHX.debian--sury-blue.svg)](https://galaxy.ansible.com/HanXHX/debian-sury)
+[![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-HanXHX.debian_sury-blue.svg)](https://galaxy.ansible.com/HanXHX/debian_sury) ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/hanxhx/ansible-debian-sury/molecule.yml?branch=master)
 
-Install Sury repository for Debian
+Install [Sury repository](https://deb.sury.org/) for Debian.
 
 
 Managed OS / Versions
 ---------------------
 
-|         OS            |       Status        |
-|:---------------------:|:-------------------:|
-| Debian Stretch (9)    | :heavy_check_mark:  |
-| Debian Buster (10)    | :heavy_check_mark:  |
-| Debian Bullseye (11)  | :heavy_check_mark:  |
+|          OS          |       Status        |
+|:--------------------:|:-------------------:|
+|  Debian Stretch (9)  | :heavy_check_mark:  |
+|  Debian Buster (10)  | :heavy_check_mark:  |
+| Debian Bullseye (11) | :heavy_check_mark:  |
+| Debian Bookworm (12) | :heavy_check_mark:  |
 
 
 Requirements
